@@ -12,6 +12,9 @@
     "moduleResolution": "node",
     // Для абсолютного импорта
     "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     // esModuleInterop позволяет рабоать с пакетами которые используют
     // common js как с обычными пакетами с помощью import и export
     "esModuleInterop": true,
