@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Button from 'shared/ui/Button/Button';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import LangSwitcher from 'widgets/LangSwitcher/LangSwitcher';
+import { useTranslation } from 'react-i18next';
 import cls from './SideBar.module.scss';
 
 interface SideBarProps {
@@ -15,6 +16,7 @@ export const SideBar = ({ className }: SideBarProps) => {
     const onToggle = () => {
         setCollapsed((prevState) => !prevState);
     };
+    const { t } = useTranslation('about');
 
     return (
         <div
@@ -22,7 +24,10 @@ export const SideBar = ({ className }: SideBarProps) => {
                 className,
             ])}
         >
-            <Button onClick={onToggle}> toggle</Button>
+            <Button onClick={onToggle}>
+                {' '}
+                {t('Нажать')}
+            </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher />
