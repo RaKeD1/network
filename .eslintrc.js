@@ -6,10 +6,8 @@ module.exports = {
     extends: [
         'plugin:react/recommended',
         'airbnb',
-<<<<<<< HEAD
         'plugin:i18next/recommended',
-=======
->>>>>>> 8c4fb52 (Добавил eslint, fix всех файлов)
+
     ],
     overrides: [
         {
@@ -36,10 +34,7 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
-<<<<<<< HEAD
         'i18next',
-=======
->>>>>>> 8c4fb52 (Добавил eslint, fix всех файлов)
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -57,10 +52,7 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'warn',
         'no-underscore-dangle': 'warn',
-<<<<<<< HEAD
         'i18next/no-literal-string': ['error', { markupOnly: true }],
-=======
->>>>>>> 8c4fb52 (Добавил eslint, fix всех файлов)
     },
     globals: {
         __IS_DEV__: true,
