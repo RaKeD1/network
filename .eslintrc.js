@@ -38,7 +38,10 @@ module.exports = {
     ],
     rules: {
         'react/jsx-indent': [2, 4],
-        'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
+        'react/jsx-filename-extension': [
+            1,
+            { extensions: ['.js', '.jsx', '.tsx'] },
+        ],
         'react/jsx-indent-props': [2, 4],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
@@ -53,6 +56,10 @@ module.exports = {
         'import/no-extraneous-dependencies': 'warn',
         'no-underscore-dangle': 'warn',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'max-len': ['error', {
+            ignoreComments: true,
+            ignorePattern: '^import\\s.+\\sfrom\\s.+;$',
+        }],
     },
     globals: {
         __IS_DEV__: true,
