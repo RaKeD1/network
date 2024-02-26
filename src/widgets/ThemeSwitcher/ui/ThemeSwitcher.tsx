@@ -6,7 +6,6 @@ import Button, { ThemeButton } from 'shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
   className?: string;
-
 }
 
 export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
