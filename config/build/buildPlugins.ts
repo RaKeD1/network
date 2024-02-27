@@ -9,7 +9,7 @@ export function buildPlugins({
     points,
     isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-    return [
+    const plugins = [
         new HTMLWebpackPlugin({
             template: points.html,
         }),
@@ -22,8 +22,12 @@ export function buildPlugins({
             __IS_DEV__: JSON.stringify(isDev),
         }),
         new ReactRefreshPlugin(),
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-        }),
     ];
+
+    if (isDev) {
+        plugins.push(new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        }));
+    }
+    return plugins;
 }
