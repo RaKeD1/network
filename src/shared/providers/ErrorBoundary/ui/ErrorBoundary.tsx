@@ -1,5 +1,4 @@
 import { ErrorInfo, ReactNode, Component } from 'react';
-import { useTranslation, withTranslation } from 'react-i18next';
 
 interface ErrorBoundaryProps {
     children:ReactNode;

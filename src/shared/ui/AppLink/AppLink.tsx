@@ -4,8 +4,10 @@ import { FC } from 'react';
 import cls from './AppLink.module.scss';
 
 export enum AppLinkTheme {
+    // eslint-disable-next-line no-unused-vars
     PRIMARY = 'primary',
-    SECONDARY = 'secondary'
+    // eslint-disable-next-line no-unused-vars
+    INVERTED_PRIMARY = 'invertedPrimary'
 }
 
 interface AppLinkProps extends LinkProps{

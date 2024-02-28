@@ -6,8 +6,54 @@
     transition: width 0.17s;
 }
 
+.icon {
+    fill: var(--inverted-primary-color);
+    height: 100%;
+    width: 28px;
+}
+
+.links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.link {
+    opacity: 1;
+}
+
 .collapsed {
     width: var(--sidebar-width-collapsed);
+
+    .links {
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .link {
+        opacity: 0;
+        transition: 0.2s opacity;
+        width: 0;
+    }
+
+    .icon {
+        opacity: 1;
+    }
+}
+
+.collapseBtn {
+    position: absolute;
+    bottom: 0;
+    right: -32px;
 }
 
 .switchers {

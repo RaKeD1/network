@@ -6,8 +6,11 @@ import { ErrorBoundary } from 'shared/providers/ErrorBoundary';
 import { PageError } from 'widgets/PageError';
 
 export enum AppRoutes {
+    // eslint-disable-next-line no-unused-vars
     MAIN = 'main',
+    // eslint-disable-next-line no-unused-vars
     ABOUT = 'about',
+    // eslint-disable-next-line no-unused-vars
     NOT_FOUND = 'not_found'
 }
 
