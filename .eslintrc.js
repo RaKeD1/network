@@ -4,6 +4,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
+    // eslint-disable-next-line max-len
     extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
     overrides: [
         {
@@ -27,6 +28,7 @@ module.exports = {
         'react',
         '@typescript-eslint',
         'i18next',
+        'react-hooks',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -53,11 +55,15 @@ module.exports = {
                 ignoreAttribute: ['data-testid'],
             },
         ],
+        'jsx-a11y/no-static-element-interactions': 'warn',
+        'jsx-a11y/click-events-have-key-events': 'warn',
         'max-len': ['error', {
             code: 100,
             ignoreComments: true,
             ignorePattern: '^import\\s.+\\sfrom\\s.+;$',
         }],
+        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
     },
     globals: {
         __IS_DEV__: true,

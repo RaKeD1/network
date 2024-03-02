@@ -6,7 +6,7 @@ export enum ButtonTheme {
     // eslint-disable-next-line no-unused-vars
     CLEAR = 'clear',
     // eslint-disable-next-line no-unused-vars
-    INVERTED = 'inverted',
+    CLEAR_INVERTED = 'clearInverted',
     // eslint-disable-next-line no-unused-vars
     OUTLINE = 'outline',
     // eslint-disable-next-line no-unused-vars
