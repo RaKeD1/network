@@ -10,24 +10,6 @@
     color: var(--primary-color);
 }
 
-.Modal.light {
-    --bg-color: #d7d7d7;
-    --inverted-bg-color: #020e1a;
-    --primary-color: #0655d5;
-    --secondary-color: #020e1a;
-    --inverted-primary-color: #049604;
-    --inverted-secondary-color: #17dc3f;
-}
-
-.Modal.dark {
-    --bg-color: #020e1a;
-    --inverted-bg-color: #d7d7d7;
-    --primary-color: #049604;
-    --secondary-color: #17dc3f;
-    --inverted-primary-color: #0655d5;
-    --inverted-secondary-color: #020e1a;
-}
-
 .overlay {
     width: 100%;
     height: 100%;
