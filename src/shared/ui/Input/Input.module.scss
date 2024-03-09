@@ -1,0 +1,43 @@
+.Input {
+    border:1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 2px 5px;
+    font:var(--font-m);
+    background: transparent;
+    &:hover{
+        outline: none;
+    }
+    &:focus-visible,{
+        border: 1px solid var(--secondary-color);
+        outline: none;
+    }
+    &:focus,{
+        border: 1px solid var(--secondary-color);
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.clear,
+.clearInverted {
+    margin: 0;
+    color: var(--primary-color);
+    font: var(--font-m);
+}
+
+.clearInverted {
+    color: var(--inverted-primary-color);
+}
+
+
+.lineBottom {
+    color: var(--primary-color);
+    border:none;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.lineBottomInverted {
+    color: var(--inverted-primary-color);
+    border: none;
+    border-bottom: 1px solid var(--inverted-primary-color);
+}
