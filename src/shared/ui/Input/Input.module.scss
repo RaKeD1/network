@@ -1,20 +1,23 @@
 .Input {
-    border:1px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     padding: 2px 5px;
-    font:var(--font-m);
+    font: var(--font-m);
     background: transparent;
-    &:hover{
+
+    &:hover {
         outline: none;
     }
-    &:focus-visible,{
+
+    &:focus-visible, {
         border: 1px solid var(--secondary-color);
         outline: none;
     }
-    &:focus,{
+
+    &:focus, {
         border: 1px solid var(--secondary-color);
         outline: none;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 5px rgb(0 0 0 / 30%);
     }
 }
 
@@ -32,7 +35,7 @@
 
 .lineBottom {
     color: var(--primary-color);
-    border:none;
+    border: none;
     border-bottom: 1px solid var(--primary-color);
 }
 
