@@ -25,15 +25,22 @@ jobs:
           npm run build:prod
         if: always()
 
-      - name: Linting and Unit Testing
+      - name: Check if SCSS files were modified
+        id: scss-changed
+        run: echo ::set-output name=modified::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.scss$' || true)
+
+      - name: Linting SCSS files
+        if: steps.scss-changed.outputs.modified
+        run: npm run lint:scss
+
+      - name: Linting TypeScript and Unit Testing
         run: |
-          npm run lint:ts &
-          npm run lint:scss &
+          npm run lint:ts
           npm run test:unit
         if: always()
 
       - name: Build Storybook and Run UI Tests
         run: |
-          npm run storybook:build &
+          npm run storybook:build
           npm run test:ui:ci
         if: always()
