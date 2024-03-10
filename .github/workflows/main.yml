@@ -13,26 +13,27 @@ jobs:
         node-version: [ 17.x ]
     steps:
       - uses: actions/checkout@v2
+
       - name: Starting Node.js ${ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install modules
-        run: npm ci
-      - name: build production project
-        run: npm run build:prod
+
+      - name: Install Modules and Build Production Project
+        run: |
+          npm ci
+          npm run build:prod
         if: always()
-      - name: linting typescript
-        run: npm run lint:ts
+
+      - name: Linting and Unit Testing
+        run: |
+          npm run lint:ts &
+          npm run lint:scss &
+          npm run test:unit
         if: always()
-      - name: linting css
-        run: npm run lint:scss
+
+      - name: Build Storybook and Run UI Tests
+        run: |
+          npm run storybook:build &
+          npm run test:ui:ci
         if: always()
-      - name: unit testing
-        run: npm run test:unit
-        if: always()
-      - name: build storybook
-        run: npm run storybook:build
-        if: always()
-      - name: screenshot testing
-        run: npm run test:ui:ci
