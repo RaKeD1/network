@@ -17,17 +17,20 @@ type Story = StoryObj<typeof Input>;
 
 export const Primary: Story = {
     args: {
+        placeholder: 'Введите имя пользователя',
     },
 };
 
 export const Clear: Story = {
     args: {
+        placeholder: 'Введите имя пользователя',
         theme: InputTheme.CLEAR,
     },
     decorators: [ThemeDecorator(Theme.LIGHT)],
 };
 export const ClearInverted: Story = {
     args: {
+        placeholder: 'Введите имя пользователя',
         theme: InputTheme.CLEAR_INVERTED,
     },
     decorators: [ThemeDecorator(Theme.LIGHT)],
@@ -35,6 +38,7 @@ export const ClearInverted: Story = {
 
 export const LineBottom: Story = {
     args: {
+        placeholder: 'Введите имя пользователя',
         theme: InputTheme.LINE_BOTTOM,
     },
     decorators: [ThemeDecorator(Theme.DARK)],
@@ -42,6 +46,7 @@ export const LineBottom: Story = {
 
 export const LineBottomInvertedTheme: Story = {
     args: {
+        placeholder: 'Введите имя пользователя',
         theme: InputTheme.LINE_BOTTOM_INVERTED,
     },
     decorators: [ThemeDecorator(Theme.DARK)],

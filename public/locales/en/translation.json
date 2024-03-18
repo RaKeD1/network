@@ -13,5 +13,6 @@
   "Зарегестрироваться": "Register",
   "Неверный логин или пароль": "Invalid username or password",
   "Введите имя пользователя": "Enter the username",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Выйти": "Exit"
 }

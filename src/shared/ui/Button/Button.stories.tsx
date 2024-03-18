@@ -129,3 +129,12 @@ export const SquareSizeXL: Story = {
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
+
+export const Disabled: Story = {
+    args: {
+        children: 'Войти',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
