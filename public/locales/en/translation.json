@@ -5,8 +5,13 @@
   "Загрузка": "Loading",
   "Главная": "Main",
   "О нас": "About",
+  "Ошибка": "Error",
   "Произошла непредвиденная ошибка": "Error",
   "Обновить страницу": "Update page",
   "Войти": "Login",
-  "Зарегестрироваться": "Register"
+  "Авторизация": "Authorization",
+  "Зарегестрироваться": "Register",
+  "Неверный логин или пароль": "Invalid username or password",
+  "Введите имя пользователя": "Enter the username",
+  "Введите пароль": "Enter password"
 }
