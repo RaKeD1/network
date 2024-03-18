@@ -16,12 +16,12 @@ type Story = StoryObj<typeof Navbar>;
 
 export const Light: Story = {
     args: {},
-    decorators: [ThemeDecorator(Theme.LIGHT)],
+    decorators: [ThemeDecorator(Theme.LIGHT), ProviderDecorator({})],
 };
 
 export const Dark: Story = {
     args: {},
-    decorators: [ThemeDecorator(Theme.DARK)],
+    decorators: [ThemeDecorator(Theme.DARK), ProviderDecorator({})],
 };
 
 export const Auth: Story = {
