@@ -58,7 +58,7 @@ module.exports = {
         'jsx-a11y/no-static-element-interactions': 'warn',
         'jsx-a11y/click-events-have-key-events': 'warn',
         'max-len': ['error', {
-            code: 100,
+            code: 140,
             ignoreComments: true,
             ignorePattern: '^import\\s.+\\sfrom\\s.+;$',
         }],
