@@ -22,7 +22,7 @@
     "test:ui:html": "npx reg-cli --from .loki/report.json --report .loki/report.html",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook",
-    "test:all": "npm run storybook:build && npm run test:ui && npm run lint:ts && npm run lint:scss && npm run test:unit && npm run test:ui:report"
+    "test:all": "npm run lint:ts && npm run lint:scss && npm run test:unit && npm run storybook:build && npm run test:ui:report"
   },
   "keywords": [],
   "author": "",

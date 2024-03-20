@@ -5,6 +5,8 @@ import { LoginModal } from 'features/AuthByUsername';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
+import { ErrorBoundary } from 'shared/providers/ErrorBoundary';
+import { PageError } from 'widgets/PageError';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -51,7 +53,7 @@ export const Navbar = ({ className }: NavbarProps) => {
                     {t('Войти')}
                 </Button>
             </div>
-            <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+            {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />}
         </div>
     );
 };
