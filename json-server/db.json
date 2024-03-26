@@ -18,7 +18,7 @@
   "profile": {
     "firstname": "Данила",
     "lastname": "Орлов",
-    "age": "20",
+    "age": 20,
     "currency": "RUB",
     "country": "Russia",
     "city": "Moscow",
