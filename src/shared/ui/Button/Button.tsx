@@ -12,6 +12,8 @@ export enum ButtonTheme {
     // eslint-disable-next-line no-unused-vars
     OUTLINE = 'outline',
     // eslint-disable-next-line no-unused-vars
+    OUTLINE_RED = 'outline_red',
+    // eslint-disable-next-line no-unused-vars
     BACKGROUND = 'background',
     // eslint-disable-next-line no-unused-vars
     BACKGROUND_INVERTED = 'backgroundInverted'

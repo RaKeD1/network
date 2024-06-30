@@ -8,13 +8,31 @@
 }
 
 .data {
-    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .input {
     margin-top: 10px;
 }
 
-.editBtn {
-    margin-left: auto;
+
+.loading,
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.editing {
+    border: 2px solid var(--inverted-primary-color);
+}
+
+.avatarWrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }

@@ -2,5 +2,12 @@
   "Профиль": "Profile",
   "Редактировать": "Edit",
   "Ваше имя": "Your firstname",
-  "Ваша фамилия": "Your lastname"
+  "Ваша фамилия": "Your lastname",
+  "Отменить": "Cansel",
+  "Произошла ошибка": "An error has occurred",
+  "Попробуйте обновить страницу": "Try refreshing the page",
+  "Ваш город": "Your city",
+  "Ваш возраст": "Your age",
+  "Введите ссылку на аватар": "Enter the link to the avatar",
+  "Ваше имя пользователя": "Your username"
 }

@@ -1,17 +1,37 @@
 {
   "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
   ],
   "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
   ],
-
   "users": [
     {
       "id": "1",
       "username": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "username": "admin@gmail.com",
       "password": "1234"
     }
   ],
@@ -19,10 +39,10 @@
     "firstname": "Данила",
     "lastname": "Орлов",
     "age": 20,
-    "currency": "RUB",
-    "country": "Russia",
+    "currency": "USD",
+    "country": "Armenia",
     "city": "Moscow",
     "username": "admin",
-    "avatar": "https://sun6-20.userapi.com/s/v1/ig2/evxnIvRo-0LTdRJwoadgQLJbZYF5oCChb316nrifSBcpiezZlijEZ02bvixnY55MtBhFgi1QsMD2uvg8nhKT3js4.jpg?size=800x801&quality=95&crop=0,0,800,801&ava=1"
+    "avatar": "https://www.kindpng.com/picc/m/119-1195498_avatar-people-person-business-user-man-character-businessman.png"
   }
 }

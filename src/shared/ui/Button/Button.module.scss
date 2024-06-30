@@ -25,6 +25,14 @@
     background: none;
 }
 
+.outline_red {
+    border: 1px solid var(--red-light);
+    font: var(--font-m);
+    color: var(--red-light);
+    background: none;
+}
+
+
 .background {
     background: var(--bg-color);
     color: var(--primary-color);

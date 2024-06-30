@@ -21,18 +21,20 @@ server.use(async (req, res, next) => {
 server.post('/login', (req, res) => {
     try {
         const { username, password } = req.body;
+        // if (!email || !password) {
+        //     return res.status(403).json({ message: 'not info' });
+        // }
         const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
         const { users = [] } = db;
-
+        console.log(123);
         const userFromBd = users.find(
             (user) => user.username === username && user.password === password,
         );
-
         if (userFromBd) {
             return res.json(userFromBd);
         }
-
-        return res.status(403).json({ message: 'User not found' });
+        console.log(userFromBd);
+        return res.status(403).json({ message: 'User not found', info: { email, password } });
     } catch (e) {
         console.log(e);
         return res.status(500).json({ message: e.message });
@@ -52,6 +54,6 @@ server.use((req, res, next) => {
 server.use(router);
 
 // запуск сервера
-server.listen(8000, () => {
-    console.log('server is running on 8000 port');
+server.listen(8008, () => {
+    console.log('server is running on 8008 port');
 });

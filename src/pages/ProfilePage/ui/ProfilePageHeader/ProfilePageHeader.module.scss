@@ -1,0 +1,15 @@
+.ProfilePageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .buttons {
+        display: flex;
+        gap: 1rem;
+
+        .editBtn {
+            margin-left: auto;
+        }
+    }
+}

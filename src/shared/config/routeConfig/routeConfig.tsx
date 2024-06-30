@@ -6,6 +6,10 @@ import { ErrorBoundary } from 'shared/providers/ErrorBoundary';
 import { PageError } from 'widgets/PageError';
 import { ProfilePage } from 'pages/ProfilePage';
 
+type AppRoutesProps = RouteProps & {
+    authOnly?: boolean;
+};
+
 export enum AppRoutes {
     // eslint-disable-next-line no-unused-vars
     MAIN = 'main',
@@ -23,7 +27,7 @@ export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.NOT_FOUND]: '*',
 };
 
-export const routeConfig: Record<AppRoutes, RouteProps> = {
+export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.MAIN]: {
         path: RoutePath.main,
         element:
@@ -38,6 +42,7 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     [AppRoutes.PROFILE]: {
         path: RoutePath.profile,
         element: <ProfilePage />,
+        authOnly: true,
     },
 
     // last

@@ -15,5 +15,7 @@
   "Введите имя пользователя": "Enter the username",
   "Введите пароль": "Enter password",
   "Выйти": "Exit",
-  "Профиль": "Profile"
+  "Профиль": "Profile",
+  "Укажите валюту": "Specify the currency",
+  "Укажите страну": "Specify the country"
 }

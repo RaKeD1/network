@@ -17,13 +17,14 @@ export enum InputTheme {
     LINE_BOTTOM_INVERTED = 'lineBottomInverted'
 }
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readonly'>
 
 interface InputProps extends HTMLInputProps {
     className?: string;
     theme?: InputTheme;
-    value?: string;
+    value?: string | number;
     onChange?: (value: string) => void;
+    readonly?: boolean;
 }
 
 export const Input = memo((props:InputProps) => {
@@ -34,12 +35,15 @@ export const Input = memo((props:InputProps) => {
         onChange,
         autoFocus,
         type = 'text',
+        readonly = false,
         ...otherProps
     } = props;
 
     const mods:Mods = {
         [cls[theme]]: true,
+        [cls.readonly]: readonly,
     };
+
     const ref = useRef<HTMLInputElement>(null);
     const [isFocused, setIsFocused] = useState(false);
 
@@ -54,11 +58,17 @@ export const Input = memo((props:InputProps) => {
         onChange?.(e.target.value);
     };
 
+    const onFocus = () => {
+        setIsFocused(true);
+    };
+
     return (
         <input
             ref={ref}
             type={type}
             value={value}
+            readOnly={readonly}
+            onFocus={onFocus}
             className={classNames(
                 cls.Input,
                 mods,
