@@ -110,7 +110,7 @@ export const ProfileCard = (props:ProfileCardProps) => {
                     onChange={onChangeCity}
                     readOnly={readonly}
                 />
-                {/* todo сделать регулярку для чисел */}
+                {/*  todo сделать регулярку для чисел */}
                 <Input
                     value={data?.age}
                     placeholder={t('Ваш возраст')}

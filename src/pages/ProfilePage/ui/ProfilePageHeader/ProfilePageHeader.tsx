@@ -24,12 +24,11 @@ export const ProfilePageHeader = ({ className }:ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     const onCancelEdit = useCallback(() => {
-        dispatch(profileActions.canselEdit());
+        dispatch(profileActions.cancelEdit());
     }, [dispatch]);
 
     const onSaveData = useCallback(() => {
         dispatch(updateProfileData());
-        dispatch(profileActions.canselEdit());
     }, [dispatch]);
 
     return (
